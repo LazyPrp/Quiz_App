@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home">
+        <section id="user-details">
+            <img src="assets1/download.png" alt="App Logo">
+            <h1>Welcome to the Quiz App</h1>
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+            <button id="start-btn" class="button-class">Enter</button>
+        </section>
+
+        <section id="category">
+            <h2>Select a Category:</h2>
+            <button class="category-btn" data-category="HTML">HTML Quiz</button>
+            <button class="category-btn" data-category="css">CSS</button>
+            <button class="category-btn" data-category="js">JavaScript</button>
+            <button class="category-btn" data-category="java">Java</button>
+        </section>
+    </div>
+
+    <!-- Initially hidden quiz section -->
+    <div id="quiz" class="hidden">
+        <div id="quiz-header">
+            <span id="timer">Time Left: 100s</span>
+            <span id="score">Score: 0</span>
+        </div>
+        <h2 id="category-title"></h2>
+        <p id="question-number">Question 1/10</p>
+        <div id="question-container"></div>
+        <div id="options-container"></div>
+        <button id="next-question-btn" class="hidden">Next Question</button>
+    </div>
+
+    <!-- Initially hidden result section -->
+    <div id="result" class="hidden">
+        <h2>Quiz Results for <span id="userName"></span></h2>
+        <p>Total Questions: 10</p>
+        <p>Correct Answers: <span id="correctAnswers"></span></p>
+        <p>Wrong Answers: <span id="wrongAnswers"></span></p>
+        <p>Score: <span id="scorePercentage"></span>%</p>
+        <p id="totalTime">Total Time Taken: 0s</p> 
+        <p id="attemptedQuestions">Questions Attempted: 0/10</p> 
+        <button onclick="startAgain()" class="button-class">Start Again</button>
+        <button onclick="goHome()" class="button-class">Go to Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
